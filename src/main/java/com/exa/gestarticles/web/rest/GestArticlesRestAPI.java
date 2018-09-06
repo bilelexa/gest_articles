@@ -77,7 +77,7 @@ public class GestArticlesRestAPI extends AbstractVerticle{
 		    rc.response().end();
 		});
 		
-		vertx.createHttpServer().requestHandler(router::accept).listen(3100);
+		vertx.createHttpServer().requestHandler(router::accept).listen(3100, "0.0.0.0");
 		System.out.println("HTTP server started on port 3100");
 	}
 
